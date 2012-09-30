@@ -24,10 +24,19 @@
             <div class="container">
                 <ul class="product-list" ng-controller="ProductListControl">
                     <li ng-repeat="product in products">
-                        <div class="produtct-holder">
-                            <img src="{{ product.thumb }}" alt="" />
-                            <a href="#">{{ product.name }}</a>
-                            <p>{{ product.details }}</p>
+                        <div class="product-holder">
+                            <img src="{{product.thumb}}" alt="" />
+
+                            <div>
+                                <span class="name">
+                                    <a href="#">{{product.name}}</a>
+                                </span>
+                                <span class="text">
+                                    {{product.price}}
+                                </span>
+                            </div>
+
+                            <p>{{product.details}}</p>
                         </div>
                     </li>
                 </ul>
